@@ -64,6 +64,9 @@
             font-weight: 600;
             font-size: 16px;
             transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
             padding: 8px 0;
             position: relative;
         }
@@ -93,46 +96,22 @@
         }
 
         .hero h1 {
-            font-size: 100px;
+            font-size: 76px;
             font-weight: 800;
             background: linear-gradient(to right, #2563eb, #7c3aed);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 20px;
             letter-spacing: -0.03em;
-            line-height: 1;
+            line-height: 1.1;
         }
 
-        .subtitle-container {
-            height: 60px;
-            margin: 0 auto 50px;
-            overflow: hidden;
-        }
-
-        .subtitle {
-            font-size: 28px;
+        .hero p {
+            font-size: 22px;
             color: #616161;
+            max-width: 500px;
+            margin: 0 auto 50px;
             font-weight: 400;
-            animation: subtitleAnimation 6s infinite;
-        }
-
-        @keyframes subtitleAnimation {
-            0%, 25% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-            30%, 55% {
-                transform: translateY(-60px);
-                opacity: 0;
-            }
-            60%, 85% {
-                transform: translateY(-60px);
-                opacity: 0;
-            }
-            90%, 100% {
-                transform: translateY(-120px);
-                opacity: 0;
-            }
         }
 
         .services-grid {
@@ -609,11 +588,7 @@
             }
             
             .hero h1 {
-                font-size: 65px;
-            }
-            
-            .subtitle {
-                font-size: 22px;
+                font-size: 50px;
             }
             
             .header-content {
@@ -648,11 +623,11 @@
             <div class="logo">GeEgo</div>
             <nav>
                 <ul>
-                    <li><a href="#" onclick="showSection('achat')">Achat</a></li>
-                    <li><a href="#" onclick="showSection('vente')">Vente</a></li>
-                    <li><a href="#" onclick="showSection('conditions')">Conditions</a></li>
-                    <li><a href="#" onclick="showSection('formation')">Formation</a></li>
-                    <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+                    <li><a href="#" onclick="showSection('achat')"><i data-lucide="shopping-cart"></i> Achat</a></li>
+                    <li><a href="#" onclick="showSection('vente')"><i data-lucide="trending-up"></i> Vente</a></li>
+                    <li><a href="#" onclick="showSection('conditions')"><i data-lucide="file-text"></i> Conditions</a></li>
+                    <li><a href="#" onclick="showSection('formation')"><i data-lucide="user"></i> Formation</a></li>
+                    <li><a href="#" onclick="showSection('contact')"><i data-lucide="mail"></i> Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -661,11 +636,7 @@
     <main class="container">
         <section class="hero" id="main-hero">
             <h1>GeEgo</h1>
-            <div class="subtitle-container">
-                <div class="subtitle">Votre auto</div>
-                <div class="subtitle">Nos pros</div>
-                <div class="subtitle">Votre auto, nos pros</div>
-            </div>
+            <p>Votre auto, nos pros</p>
             
             <div class="services-grid">
                 <div class="service-card" onclick="showSection('achat')">
@@ -920,5 +891,8 @@
     </script>
 </body>
 </html>
+          
 
+            
+   
         
