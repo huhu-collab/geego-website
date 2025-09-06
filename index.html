@@ -165,18 +165,18 @@
             margin: 0 auto 40px;
         }
 
-        .conditions-section, .formation-section, .contact-section, .offre-section {
+        .conditions-section, .formation-section, .contact-section, .offre-section, .about-section {
             margin-bottom: 32px;
         }
 
-        .conditions-section h3, .formation-section h3, .contact-section h3, .offre-section h3 {
+        .conditions-section h3, .formation-section h3, .contact-section h3, .offre-section h3, .about-section h3 {
             font-size: 20px;
             font-weight: 600;
             color: #3b82f6;
             margin-bottom: 16px;
         }
 
-        .conditions-section p, .formation-section p, .contact-section p, .offre-section p {
+        .conditions-section p, .formation-section p, .contact-section p, .offre-section p, .about-section p {
             color: #4b5563;
             margin-bottom: 12px;
         }
@@ -733,98 +733,173 @@
             </div>
         </section>
 
-        <!-- Autres sections (Conditions, Formation, Contact, À propos) -->
-        <!-- ... (le contenu des autres sections reste inchangé) ... -->
-
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <div class="footer-logo">GeEgo</div>
-                    <p style="color: #d1d5db; max-width: 300px;">Votre partenaire de confiance pour tous vos projets automobiles.</p>
-                </div>
-                
-                <div class="footer-links">
-                    <a href="#" onclick="showSection('conditions')">Conditions générales</a>
-                    <a href="#" onclick="showSection('formation')">Formation</a>
-                    <a href="#" onclick="showSection('contact')">Contact</a>
-                    <a href="#">Mentions légales</a>
-                </div>
-                
-                <div class="footer-links">
-                    <a href="#">Politique de confidentialité</a>
-                    <a href="#">Protection des données</a>
-                    <a href="#">Cookies</a>
-                    <a href="#">FAQ</a>
-                </div>
+        <!-- Section Formation -->
+        <section class="content-section" id="formation-content">
+            <div class="back-button" onclick="showMain()">
+                <i data-lucide="arrow-left"></i> Retour à l'accueil
             </div>
             
-            <div class="legal-info">
-                <p>© 2023 GeEgo Auto Advisor - Tous droits réservés</p>
-                <p>Site protégé par le droit d'auteur - Toute reproduction interdite sans autorisation</p>
+            <h2 class="section-title">Formation GeEgo</h2>
+            <p class="section-subtitle">Processus automobile éprouvé depuis 3 ans - 98% moins cher qu'une franchise</p>
+            
+            <div class="formation-section">
+                <h3>Notre Programme de Formation</h3>
+                <p>Notre formation complète vous permet de maîtriser tous les aspects du métier de conseiller automobile expert.</p>
+                
+                <ul class="formation-list">
+                    <li><strong>Expertise technique automobile :</strong> Apprenez à évaluer l'état d'un véhicule de manière professionnelle.</li>
+                    <li><strong>Négociation commerciale :</strong> Maîtrisez les techniques de négociation pour obtenir les meilleurs prix.</li>
+                    <li><strong>Gestion administrative :</strong> Gérez tous les documents légaux et administratifs en toute conformité.</li>
+                    <li><strong>Relation client d'exception :</strong> Développez des relations durables avec vos clients.</li>
+                    <li><strong>Marketing digital automobile :</strong> Apprenez à promouvoir vos services efficacement en ligne.</li>
+                </ul>
             </div>
-        </div>
-    </footer>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card franchise">
+                    <h3>Franchise Traditionnelle</h3>
+                    <div class="price-tag">30 000€ - 100 000€</div>
+                    <p>Droit d'entrée</p>
+                    <p>+ 1 500€ - 4 000€/mois</p>
+                    <p>+ Local obligatoire</p>
+                </div>
+                
+                <div class="comparison-card geego">
+                    <h3>Formation GeEgo</h3>
+                    <div class="price-tag">2 500€</div>
+                    <p>Formation complète</p>
+                    <p>+ Accès leads 149€/mois</p>
+                    <p>Aucun local requis</p>
+                </div>
+            </div>
 
-    <script>
-        // Initialisation des icônes Lucide
-        lucide.createIcons();
-        
-        // Fonctions pour gérer l'affichage des sections
-        function showSection(sectionId) {
-            document.getElementById('main-hero').style.display = 'none';
+            <div class="formation-form">
+                <h3 style="text-align: center; margin-bottom: 24px;">Candidature Formation GeEgo</h3>
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" placeholder="Votre nom et prénom">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="votre@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" placeholder="06 XX XX XX XX">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="region">Région d'activité</label>
+                        <input type="text" id="region" placeholder="Région ou département">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="experience">Expérience automobile</label>
+                        <select id="experience">
+                            <option value="">Votre background professionnel</option>
+                            <option value="vendeur">Vendeur automobile</option>
+                            <option value="mecanicien">Mécanicien / Technicien</option>
+                            <option value="expert">Expert automobile</option>
+                            <option value="mandataire">Mandataire auto</option>
+                            <option value="reconversion">Reconversion professionnelle</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Services souhaités</label>
+                        <select id="service">
+                            <option value="">Votre spécialité préférée</option>
+                            <option value="achat">Expertise achat</option>
+                            <option value="vente">Mandats de vente</option>
+                            <option value="expertise">Diagnostics techniques</option>
+                            <option value="multi">Polyvalent (tout services)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="motivation">Votre motivation</label>
+                    <textarea id="motivation" placeholder="Pourquoi la formation GeEgo vous intéresse ? Objectifs de revenus, disponibilité..."></textarea>
+                </div>
+                
+                <button class="btn-primary">Accéder à la Formation GeEgo - 2 500€</button>
+            </div>
+        </section>
+
+        <!-- Section Conditions Générales -->
+        <section class="content-section" id="conditions-content">
+            <div class="back-button" onclick="showMain()">
+                <i data-lucide="arrow-left"></i> Retour à l'accueil
+            </div>
             
-            // Masquer toutes les sections de contenu
-            const contentSections = document.querySelectorAll('.content-section');
-            contentSections.forEach(section => {
-                section.classList.remove('active');
-            });
+            <h2 class="section-title">Conditions Générales et Protection des Données</h2>
+            <p class="section-subtitle">Engagés pour la transparence et la protection de vos données personnelles</p>
             
-            // Afficher la section demandée
-            const sectionToShow = document.getElementById(sectionId + '-content');
-            if (sectionToShow) {
-                sectionToShow.classList.add('active');
-            }
+            <div class="conditions-section">
+                <h3>Protection des données (RGPD)</h3>
+                <p>Conformément au Règlement Général sur la Protection des Données (RGPD), nous nous engageons à protéger vos données personnelles.</p>
+                
+                <ul class="conditions-list">
+                    <li><strong>Collecte des données :</strong> Nous collectons uniquement les données nécessaires à la fourniture de nos services.</li>
+                    <li><strong>Finalité :</strong> Vos données sont utilisées exclusivement pour la gestion de votre compte et la fourniture des services souscrits.</li>
+                    <li><strong>Conservation :</strong> Les données sont conservées pendant la durée strictement nécessaire à l'accomplissement des finalités précitées.</li>
+                    <li><strong>Accès et modification :</strong> Vous pouvez accéder à vos données et demander leur modification ou suppression à tout moment.</li>
+                    <li><strong>Sécurité :</strong> Nous mettons en œuvre toutes les mesures techniques et organisationnelles nécessaires pour garantir la sécurité de vos données.</li>
+                    <li><strong>Partage :</strong> Aucune donnée personnelle n'est cédée à des tiers sans votre consentement explicite.</li>
+                </ul>
+            </div>
             
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-        
-        function showMain() {
-            // Masquer toutes les sections de contenu
-            const contentSections = document.querySelectorAll('.content-section');
-            contentSections.forEach(section => {
-                section.classList.remove('active');
-            });
+            <div class="conditions-section">
+                <h3>Cookies et Traceurs</h3>
+                <p>Notre site utilise des cookies pour améliorer l'expérience utilisateur et analyser le trafic.</p>
+                
+                <ul class="conditions-list">
+                    <li><strong>Cookies essentiels :</strong> Nécessaires au fonctionnement basique du site.</li>
+                    <li><strong>Cookies analytiques :</strong> Nous aident à comprendre comment les visiteurs interagissent avec notre site.</li>
+                    <li><strong>Cookies de préférences :</strong> Mémorisent vos choix et paramètres.</li>
+                    <li><strong>Contrôle :</strong> Vous pouvez contrôler et modifier vos préférences de cookies à tout moment.</li>
+                </ul>
+            </div>
             
-            // Afficher la section principale
-            document.getElementById('main-hero').style.display = 'block';
+            <div class="conditions-section">
+                <h3>Engagements de Service</h3>
+                <p>GeEgo s'engage à fournir des services de qualité avec une équipe de professionnels expérimentés.</p>
+                
+                <ul class="conditions-list">
+                    <li><strong>Expertise :</strong> Tous nos conseillers automobiles possèdent au moins 10 ans d'expérience.</li>
+                    <li><strong>Transparence :</strong> Aucun coût caché, tous nos tarifs sont clairement affichés.</li>
+                    <li><strong>Disponibilité :</strong> Notre standard est disponible 6j/7 de 8h à 20h.</li>
+                    <li><strong>Satisfaction :</strong> 97% de nos clients sont satisfaits de nos services (enquête 2023).</li>
+                </ul>
+            </div>
             
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-        
-        // Animation simple au défilement
-        document.addEventListener('DOMContentLoaded', function() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = 1;
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, { threshold: 0.1 });
+            <div class="conditions-section">
+                <h3>Droit de Rétractation</h3>
+                <p>Conformément à la législation française, vous bénéficiez d'un délai de rétractation de 14 jours à compter de la souscription de nos services.</p>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section class="content-section" id="contact-content">
+            <div class="back-button" onclick="showMain()">
+                <i data-lucide="arrow-left"></i> Retour à l'accueil
+            </div>
             
-            // Observer les éléments à animer
-            document.querySelectorAll('.service-card, .value-card, .comparison-card, .contact-method, .offre-card').forEach(card => {
-                card.style.opacity = 0;
-                card.style.transform = 'translateY(20px)';
-                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                observer.observe(card);
-            });
-        });
-    </script>
-</body>
-</html>
+            <h2 class="section-title">Contactez-nous</h2>
+            <p class="section-subtitle">Notre équipe est à votre disposition pour répondre à toutes vos questions</p>
+            
+            <div class="contact-info">
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i data-lucide="phone" width="24" height="24"></i>
+                    </div>
+                    <h3>Téléphone</h3>
+                    <p>06 37 46 95 32</p>
+                    <p>Lun-Ven: 8h-20h</p>
+                </div>
+                
+                <div
