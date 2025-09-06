@@ -451,6 +451,39 @@
             color: #9ca3af;
         }
 
+        /* Couleurs spécifiques pour chaque section */
+        .achat-section {
+            background-color: rgba(16, 185, 129, 0.05);
+        }
+        
+        .vente-section {
+            background-color: rgba(59, 130, 246, 0.05);
+        }
+        
+        .standard-section {
+            background-color: rgba(139, 92, 246, 0.05);
+        }
+        
+        .negociation-section {
+            background-color: rgba(59, 130, 246, 0.05);
+        }
+        
+        .formation-section-content {
+            background-color: rgba(16, 185, 129, 0.05);
+        }
+        
+        .conditions-section-content {
+            background-color: rgba(139, 92, 246, 0.05);
+        }
+        
+        .contact-section-content {
+            background-color: rgba(16, 185, 129, 0.05);
+        }
+        
+        .about-section-content {
+            background-color: rgba(16, 185, 129, 0.05);
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -574,7 +607,7 @@
         </section>
 
         <!-- Section Achat -->
-        <section class="content-section" id="achat-content">
+        <section class="content-section achat-section" id="achat-content">
             <div class="back-button" onclick="showMain()">
                 <i data-lucide="arrow-left"></i> Retour à l'accueil
             </div>
@@ -599,7 +632,7 @@
                         <li>Rapport détaillé complet</li>
                     </ul>
                 </div>
-                <button class="btn-primary">Choisir cette offre</button>
+                <button class="btn-primary" onclick="showSection('contact')">Choisir cette offre</button>
             </div>
             
             <div class="offre-card">
@@ -619,12 +652,12 @@
                         <li>Service clé en main - Sérénité totale</li>
                     </ul>
                 </div>
-                <button class="btn-primary">Choisir cette offre</button>
+                <button class="btn-primary" onclick="showSection('contact')">Choisir cette offre</button>
             </div>
         </section>
 
         <!-- Section Vente -->
-        <section class="content-section" id="vente-content">
+        <section class="content-section vente-section" id="vente-content">
             <div class="back-button" onclick="showMain()">
                 <i data-lucide="arrow-left"></i> Retour à l'accueil
             </div>
@@ -648,7 +681,7 @@
                         <li>Accompagnement démarches administratives</li>
                     </ul>
                 </div>
-                <button class="btn-primary">Choisir cette offre</button>
+                <button class="btn-primary" onclick="showSection('contact')">Choisir cette offre</button>
             </div>
             
             <div class="offre-card">
@@ -668,12 +701,12 @@
                         <li>Standard d'appel dédié - Service premium</li>
                     </ul>
                 </div>
-                <button class="btn-primary">Choisir cette offre</button>
+                <button class="btn-primary" onclick="showSection('contact')">Choisir cette offre</button>
             </div>
         </section>
 
         <!-- Section Standard Téléphonique -->
-        <section class="content-section" id="standard-content">
+        <section class="content-section standard-section" id="standard-content">
             <div class="back-button" onclick="showMain()">
                 <i data-lucide="arrow-left"></i> Retour à l'accueil
             </div>
@@ -697,15 +730,15 @@
                         <li>Filtrage des acheteurs sérieux</li>
                         <li>Planification des visites qualifiées</li>
                         <li>Compte-rendu détaillé de chaque appel</li>
-                        <li>Service 7j/7 pendant les heures d'ouverture</li>
+                        <li>Service 6j/7 du lundi au samedi de 9h à 21h</li>
                     </ul>
                 </div>
-                <button class="btn-primary">Choisir cette offre</button>
+                <button class="btn-primary" onclick="showSection('contact')">Choisir cette offre</button>
             </div>
         </section>
 
         <!-- Section Négociation -->
-        <section class="content-section" id="negociation-content">
+        <section class="content-section negociation-section" id="negociation-content">
             <div class="back-button" onclick="showMain()">
                 <i data-lucide="arrow-left"></i> Retour à l'accueil
             </div>
@@ -732,29 +765,31 @@
                         <li>Si pas d'économie = Service 100% GRATUIT</li>
                     </ul>
                 </div>
-                <button class="btn-primary">Choisir cette offre</button>
+                <button class="btn-primary" onclick="showSection('contact')">Choisir cette offre</button>
             </div>
         </section>
 
         <!-- Section Formation -->
-        <section class="content-section" id="formation-content">
+        <section class="content-section formation-section-content" id="formation-content">
             <div class="back-button" onclick="showMain()">
                 <i data-lucide="arrow-left"></i> Retour à l'accueil
             </div>
             
             <h2 class="section-title">Formation GeEgo</h2>
-            <p class="section-subtitle">Processus automobile éprouvé depuis 3 ans - 98% moins cher qu'une franchise</p>
+            <p class="section-subtitle">Devenez expert automobile même sans expérience préalable</p>
             
             <div class="formation-section">
-                <h3>Notre Programme de Formation</h3>
-                <p>Notre formation complète vous permet de maîtriser tous les aspects du métier de conseiller automobile expert.</p>
+                <h3>Notre Programme de Formation Accessible à Tous</h3>
+                <p>Notre formation complète est conçue pour les débutants comme pour les personnes ayant déjà une expérience dans l'automobile. Aucun pré-requis n'est nécessaire.</p>
                 
                 <ul class="formation-list">
-                    <li><strong>Expertise technique automobile :</strong> Apprenez à évaluer l'état d'un véhicule de manière professionnelle.</li>
-                    <li><strong>Négociation commerciale :</strong> Maîtrisez les techniques de négociation pour obtenir les meilleurs prix.</li>
-                    <li><strong>Gestion administrative :</strong> Gérez tous les documents légaux et administratifs en toute conformité.</li>
-                    <li><strong>Relation client d'exception :</strong> Développez des relations durables avec vos clients.</li>
-                    <li><strong>Marketing digital automobile :</strong> Apprenez à promouvoir vos services efficacement en ligne.</li>
+                    <li><strong>Initiation à l'automobile :</strong> Apprenez les bases du fonctionnement des véhicules, même sans connaissances techniques préalables.</li>
+                    <li><strong>Évaluation technique simplifiée :</strong> Méthodes accessibles pour évaluer l'état d'un véhicule.</li>
+                    <li><strong>Négociation commerciale :</strong> Techniques accessibles pour obtenir les meilleurs prix.</li>
+                    <li><strong>Gestion administrative pas à pas :</strong> Guide complet des documents légaux et administratifs.</li>
+                    <li><strong>Relation client :</strong> Développez des relations durables avec vos clients.</li>
+                    <li><strong>Marketing digital accessible :</strong> Apprenez à promouvoir vos services efficacement en ligne.</li>
+                    <li><strong>Création d'entreprise simplifiée :</strong> Accompagnement pour lancer votre activité.</li>
                 </ul>
             </div>
             
@@ -773,6 +808,7 @@
                     <p>Formation complète</p>
                     <p>+ Accès leads 149€/mois</p>
                     <p>Aucun local requis</p>
+                    <p>Aucun pré-requis nécessaire</p>
                 </div>
             </div>
 
@@ -801,21 +837,20 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="experience">Expérience automobile</label>
+                        <label for="experience">Niveau de connaissance automobile</label>
                         <select id="experience">
-                            <option value="">Votre background professionnel</option>
-                            <option value="vendeur">Vendeur automobile</option>
-                            <option value="mecanicien">Mécanicien / Technicien</option>
-                            <option value="expert">Expert automobile</option>
-                            <option value="mandataire">Mandataire auto</option>
-                            <option value="reconversion">Reconversion professionnelle</option>
+                            <option value="">Sélectionnez votre niveau</option>
+                            <option value="debutant">Débutant complet</option>
+                            <option value="intermediaire">Quelques connaissances</option>
+                            <option value="avance">Bonnes connaissances</option>
+                            <option value="expert">Expérience professionnelle</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label for="service">Services souhaités</label>
+                        <label for="service">Services qui vous intéressent</label>
                         <select id="service">
-                            <option value="">Votre spécialité préférée</option>
+                            <option value="">Sélectionnez un service</option>
                             <option value="achat">Expertise achat</option>
                             <option value="vente">Mandats de vente</option>
                             <option value="expertise">Diagnostics techniques</option>
@@ -826,15 +861,15 @@
                 
                 <div class="form-group">
                     <label for="motivation">Votre motivation</label>
-                    <textarea id="motivation" placeholder="Pourquoi la formation GeEgo vous intéresse ? Objectifs de revenus, disponibilité..."></textarea>
+                    <textarea id="motivation" placeholder="Pourquoi la formation GeEgo vous intéresse ? Objectifs, disponibilité..."></textarea>
                 </div>
                 
-                <button class="btn-primary">Accéder à la Formation GeEgo - 2 500€</button>
+                <button class="btn-primary" onclick="showSection('contact')">Accéder à la Formation GeEgo - 2 500€</button>
             </div>
         </section>
 
         <!-- Section Conditions Générales -->
-        <section class="content-section" id="conditions-content">
+        <section class="content-section conditions-section-content" id="conditions-content">
             <div class="back-button" onclick="showMain()">
                 <i data-lucide="arrow-left"></i> Retour à l'accueil
             </div>
@@ -887,7 +922,7 @@
         </section>
 
         <!-- Section Contact -->
-        <section class="content-section" id="contact-content">
+        <section class="content-section contact-section-content" id="contact-content">
             <div class="back-button" onclick="showMain()">
                 <i data-lucide="arrow-left"></i> Retour à l'accueil
             </div>
@@ -903,6 +938,7 @@
                     <h3>Téléphone</h3>
                     <p>06 37 46 95 32</p>
                     <p>Lun-Ven: 8h-20h</p>
+                    <p>Sam: 9h-18h</p>
                 </div>
                 
                 <div class="contact-method">
@@ -936,7 +972,8 @@
                         <option value="">Sélectionnez un sujet</option>
                         <option value="achat">Service d'achat</option>
                         <option value="vente">Service de vente</option>
-                        <option value="expertise">Service d'expertise</option>
+                        <option value="standard">Standard téléphonique</option>
+                        <option value="negociation">Négociation</option>
                         <option value="formation">Formation GeEgo</option>
                         <option value="autre">Autre demande</option>
                     </select>
@@ -952,7 +989,7 @@
         </section>
 
         <!-- Section À Propos -->
-        <section class="content-section" id="about-content">
+        <section class="content-section about-section-content" id="about-content">
             <div class="back-button" onclick="showMain()">
                 <i data-lucide="arrow-left"></i> Retour à l'accueil
             </div>
@@ -1017,14 +1054,14 @@
                     <a href="#" onclick="showSection('conditions')">Conditions générales</a>
                     <a href="#" onclick="showSection('formation')">Formation</a>
                     <a href="#" onclick="showSection('contact')">Contact</a>
-                    <a href="#">Mentions légales</a>
+                    <a href="#" onclick="showSection('about')">À propos</a>
                 </div>
                 
                 <div class="footer-links">
-                    <a href="#">Politique de confidentialité</a>
-                    <a href="#">Protection des données</a>
-                    <a href="#">Cookies</a>
-                    <a href="#">FAQ</a>
+                    <a href="#" onclick="showSection('conditions')">Politique de confidentialité</a>
+                    <a href="#" onclick="showSection('conditions')">Protection des données</a>
+                    <a href="#" onclick="showSection('conditions')">Cookies</a>
+                    <a href="#" onclick="showSection('contact')">FAQ</a>
                 </div>
             </div>
             
@@ -1095,3 +1132,5 @@
     </script>
 </body>
 </html>
+
+        
