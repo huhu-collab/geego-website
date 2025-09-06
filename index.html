@@ -303,6 +303,9 @@
             font-size: 28px;
             font-weight: 800;
             color: #3b82f6;
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .offre-description {
@@ -496,10 +499,10 @@
             <div class="logo">GeEgo</div>
             <nav>
                 <ul>
-                    <li><a href="#" onclick="showSection('annonces')"><i data-lucide="car"></i> Annonces</a></li>
                     <li><a href="#" onclick="showSection('achat')"><i data-lucide="shopping-cart"></i> Achat</a></li>
                     <li><a href="#" onclick="showSection('vente')"><i data-lucide="trending-up"></i> Vente</a></li>
                     <li><a href="#" onclick="showSection('conditions')"><i data-lucide="file-text"></i> Conditions</a></li>
+                    <li><a href="#" onclick="showSection('formation')"><i data-lucide="user"></i> Formation</a></li>
                     <li><a href="#" onclick="showSection('contact')"><i data-lucide="mail"></i> Contact</a></li>
                 </ul>
             </nav>
@@ -902,4 +905,193 @@
                     <p>Lun-Ven: 8h-20h</p>
                 </div>
                 
-                <div
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i data-lucide="mail" width="24" height="24"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>contact@geegoauto.fr</p>
+                    <p>Réponse sous 24h</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3 style="text-align: center; margin-bottom: 24px;">Envoyez-nous un message</h3>
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="contact-name">Nom complet</label>
+                        <input type="text" id="contact-name" placeholder="Votre nom et prénom">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" placeholder="votre@email.com">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact-subject">Sujet</label>
+                    <select id="contact-subject">
+                        <option value="">Sélectionnez un sujet</option>
+                        <option value="achat">Service d'achat</option>
+                        <option value="vente">Service de vente</option>
+                        <option value="expertise">Service d'expertise</option>
+                        <option value="formation">Formation GeEgo</option>
+                        <option value="autre">Autre demande</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact-message">Votre message</label>
+                    <textarea id="contact-message" placeholder="Décrivez-nous votre demande..."></textarea>
+                </div>
+                
+                <button class="btn-primary">Envoyer le message</button>
+            </div>
+        </section>
+
+        <!-- Section À Propos -->
+        <section class="content-section" id="about-content">
+            <div class="back-button" onclick="showMain()">
+                <i data-lucide="arrow-left"></i> Retour à l'accueil
+            </div>
+            
+            <h2 class="section-title">À Propos de GeEgo</h2>
+            <p class="section-subtitle">L'expertise automobile réinventée par des professionnels passionnés</p>
+            
+            <div class="about-section">
+                <h3>Notre Histoire</h3>
+                <p>Fondée par des experts automobiles cumulant plus de 20 ans d'expérience, GeEgo est née d'un constat simple : le marché automobile manque de transparence et d'accompagnement personnalisé.</p>
+                
+                <p>Face à ce constat, nous avons décidé de créer une plateforme qui met l'expertise professionnelle au service des particuliers, en garantissant transparence, sécurité et économies.</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i data-lucide="award" width="24" height="24"></i>
+                    </div>
+                    <h4>Expertise Réelle</h4>
+                    <p>Notre équipe est composée exclusivement de professionnels de l'automobile avec minimum 10 ans d'expérience terrain.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i data-lucide="shield" width="24" height="24"></i>
+                    </div>
+                    <h4>Transparence Totale</h4>
+                    <p>Chez GeEgo, pas de commissions cachées, pas de surprises. Nous croyons en des relations client basées sur la confiance.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i data-lucide="users" width="24" height="24"></i>
+                    </div>
+                    <h4>Accompagnement</h4>
+                    <p>De l'achat à la vente, en passant par la négociation, nous vous accompagnons à chaque étape de votre projet automobile.</p>
+                </div>
+            </div>
+            
+            <div class="about-section">
+                <h3>Notre Mission</h3>
+                <p>Révolutionner l'expérience automobile en apportant l'expertise professionnelle directement aux particuliers, à des tarifs transparents et sans engagement caché.</p>
+            </div>
+            
+            <div class="about-section">
+                <h3>Notre Vision</h3>
+                <p>Devenir le partenaire de référence pour tous les projets automobiles en France, en garantissant sérénité, économies et satisfaction à chaque client.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">GeEgo</div>
+                    <p style="color: #d1d5db; max-width: 300px;">Votre partenaire de confiance pour tous vos projets automobiles.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#" onclick="showSection('conditions')">Conditions générales</a>
+                    <a href="#" onclick="showSection('formation')">Formation</a>
+                    <a href="#" onclick="showSection('contact')">Contact</a>
+                    <a href="#">Mentions légales</a>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Protection des données</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+            
+            <div class="legal-info">
+                <p>© 2023 GeEgo Auto Advisor - Tous droits réservés</p>
+                <p>Site protégé par le droit d'auteur - Toute reproduction interdite sans autorisation</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialisation des icônes Lucide
+        lucide.createIcons();
+        
+        // Fonctions pour gérer l'affichage des sections
+        function showSection(sectionId) {
+            document.getElementById('main-hero').style.display = 'none';
+            
+            // Masquer toutes les sections de contenu
+            const contentSections = document.querySelectorAll('.content-section');
+            contentSections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Afficher la section demandée
+            const sectionToShow = document.getElementById(sectionId + '-content');
+            if (sectionToShow) {
+                sectionToShow.classList.add('active');
+            }
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        function showMain() {
+            // Masquer toutes les sections de contenu
+            const contentSections = document.querySelectorAll('.content-section');
+            contentSections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Afficher la section principale
+            document.getElementById('main-hero').style.display = 'block';
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Animation simple au défilement
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            // Observer les éléments à animer
+            document.querySelectorAll('.service-card, .value-card, .comparison-card, .contact-method, .offre-card').forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
